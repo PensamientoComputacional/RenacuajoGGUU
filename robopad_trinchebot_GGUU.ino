@@ -94,42 +94,42 @@ int numChar = 0;
  ******************************************************************/
 
 void stopWheels() {
-  digitalWrite(pinLeftWheelFordward, 0);
-  digitalWrite(pinLeftWheelBackward, 0);
-  digitalWrite(pinRightWheelFordward, 0);
-  digitalWrite(pinRightWheelBackward, 0);
+  analogWrite(pinLeftWheelFordward, 0);
+  analogWrite(pinLeftWheelBackward, 0);
+  analogWrite(pinRightWheelFordward, 0);
+  analogWrite(pinRightWheelBackward, 0);
   delay(defaultDelay);
 }
 
 void goForwards() {
-  digitalWrite(pinLeftWheelFordward, leftWheelFordwardValue);
-  digitalWrite(pinLeftWheelBackward, 0);
-  digitalWrite(pinRightWheelFordward, rightWheelFordwardValue);
-  digitalWrite(pinRightWheelBackward, 0);
+  analogWrite(pinLeftWheelFordward, leftWheelFordwardValue);
+  analogWrite(pinLeftWheelBackward, 0);
+  analogWrite(pinRightWheelFordward, rightWheelFordwardValue);
+  analogWrite(pinRightWheelBackward, 0);
   delay(defaultDelay);
 }
 
 void goBackwards() {
-  digitalWrite(pinLeftWheelFordward, 0);
-  digitalWrite(pinLeftWheelBackward, leftWheelBackwardsValue);
-  digitalWrite(pinRightWheelFordward, 0);
-  digitalWrite(pinRightWheelBackward, rightWheelBackwardsValue);
+  analogWrite(pinLeftWheelFordward, 0);
+  analogWrite(pinLeftWheelBackward, leftWheelBackwardsValue);
+  analogWrite(pinRightWheelFordward, 0);
+  analogWrite(pinRightWheelBackward, rightWheelBackwardsValue);
   delay(defaultDelay);
 }
 
 void goLeft() {
-  digitalWrite(pinLeftWheelFordward, 0);
-  digitalWrite(pinLeftWheelBackward, leftWheelBackwardsValue);
-  digitalWrite(pinRightWheelFordward, rightWheelFordwardValue);
-  digitalWrite(pinRightWheelBackward, 0);
+  analogWrite(pinLeftWheelFordward, 0);
+  analogWrite(pinLeftWheelBackward, leftWheelBackwardsValue);
+  analogWrite(pinRightWheelFordward, rightWheelFordwardValue);
+  analogWrite(pinRightWheelBackward, 0);
   delay(defaultDelay);
 }
 
 void goRight() {
-  digitalWrite(pinLeftWheelFordward, leftWheelFordwardValue);
-  digitalWrite(pinLeftWheelBackward, 0);
-  digitalWrite(pinRightWheelFordward, 0);
-  digitalWrite(pinRightWheelBackward, rightWheelBackwardsValue);
+  analogWrite(pinLeftWheelFordward, leftWheelFordwardValue);
+  analogWrite(pinLeftWheelBackward, 0);
+  analogWrite(pinRightWheelFordward, 0);
+  analogWrite(pinRightWheelBackward, rightWheelBackwardsValue);
   delay(defaultDelay);
 }
 
