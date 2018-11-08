@@ -192,26 +192,26 @@ void followTheLine() {
   /* If the right sensor reads black, we go straight forward, else
      if it reads white, we turn to the left */
   if (rightIR == BLACK) {
-    digitalWrite(pinLeftWheelFordward, leftWheelFordwardValue);
-    digitalWrite(pinLeftWheelBackward, 0);
+    analogWrite(pinLeftWheelFordward, leftWheelFordwardValue);
+    analogWrite(pinLeftWheelBackward, 0);
     delay(defaultDelay);
   
   } else {
-    digitalWrite(pinLeftWheelFordward, 0);
-    digitalWrite(pinLeftWheelBackward, 0);
+    analogWrite(pinLeftWheelFordward, 0);
+    analogWrite(pinLeftWheelBackward, 0);
     delay(defaultDelay);
   }
   
   /* If the left sensor reads black, we go straight forward, else
     if it reads white, we turn to the right */
   if (leftIR == BLACK) {
-    digitalWrite(pinRightWheelFordward, rightWheelFordwardValue);
-    digitalWrite(pinRightWheelBackward, 0);
+    analogWrite(pinRightWheelFordward, rightWheelFordwardValue);
+    analogWrite(pinRightWheelBackward, 0);
     delay(defaultDelay);
   
   } else {
-    digitalWrite(pinRightWheelFordward, 0);
-    digitalWrite(pinRightWheelBackward, 0);
+    analogWrite(pinRightWheelFordward, 0);
+    analogWrite(pinRightWheelBackward, 0);
     delay((defaultDelay));
   }
 }
